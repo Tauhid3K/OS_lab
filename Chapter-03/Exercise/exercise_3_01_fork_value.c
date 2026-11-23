@@ -7,11 +7,7 @@
  * Practice Exercise 3.1 / Figure 3.30 (Operating System Concepts, 10th Ed.)
  *
  * Question: What will be the output at LINE A?
- * Explanation:
- * When fork() is called, child process gets a separate copy of parent's address space.
- * The child modifies its own copy of 'value' (value += 15).
- * The parent's copy remains 5.
- * Therefore, LINE A prints: PARENT: value = 5.
+ * 
  */
 
 int value = 5;

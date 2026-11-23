@@ -1,3 +1,5 @@
+//This program demonstrates the different return values of fork() in the parent and child.
+
 #include <stdio.h>
 #include <sys/types.h>
 #include <sys/wait.h>
@@ -8,12 +10,6 @@
  *
  * Question: Assuming parent PID = 2600 and child PID = 2603,
  * what are the values of pid and pid1 at lines A, B, C, and D?
- *
- * Analysis:
- * Line A (Child):  pid  = 0     (fork() returns 0 to the child)
- * Line B (Child):  pid1 = 2603  (getpid() inside child returns its own PID)
- * Line C (Parent): pid  = 2603  (fork() returns child's PID to parent)
- * Line D (Parent): pid1 = 2600  (getpid() inside parent returns parent's own PID)
  */
 
 int main(void)

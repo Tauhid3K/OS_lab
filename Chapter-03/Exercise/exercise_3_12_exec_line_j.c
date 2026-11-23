@@ -1,3 +1,4 @@
+//This program demonstrates that exec replaces the current process image.
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -9,12 +10,6 @@
  *
  * Question: Under what circumstances would "LINE J" be reached?
  *
- * Explanation:
- * The execlp() system call completely replaces the address space of the process
- * with the new executable program ("/bin/ls").
- * If execlp() succeeds, it never returns, so "LINE J" is NEVER reached.
- * "LINE J" is reached ONLY IF execlp() encounters an error and returns -1
- * (e.g., if the file doesn't exist, lacks execute permissions, or memory is exhausted).
  */
 
 int main(int argc, char *argv[])
@@ -42,9 +37,11 @@ int main(int argc, char *argv[])
         if (test_failure) {
             // Intentionally invalid executable to demonstrate LINE J execution
             execlp("/bin/nonexistent_command_xyz", "nonexistent", NULL);
+            //Tries to execute a non-existent file
         } else {
             // Normal execution
             execlp("/bin/ls", "ls", NULL);
+            //Replace child process with bin/ls command.
         }
 
         // LINE J is reached ONLY if execlp() fails!
