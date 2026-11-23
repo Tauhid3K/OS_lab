@@ -1,0 +1,6 @@
+{
+    "code-runner.executorMap": {
+        "c": "cd \"$dir\" && make",
+        "cpp": "cd \"$dir\" && g++ \"$fileName\" -o \"$dirWithoutTrailingSlash/../output/$fileNameWithoutExt\" && \"$dirWithoutTrailingSlash/../output/$fileNameWithoutExt\""
+    }
+}
