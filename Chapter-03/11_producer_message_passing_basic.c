@@ -1,3 +1,5 @@
+// This program combines production and message sending.
+
 #include <stdio.h>
 
 int main(void)
@@ -6,7 +8,7 @@ int main(void)
 
     printf("Producer Process Started\n\n");
 
-    for (int i = 1; i <= 5; i++) {
+    for (int i = 1; i <= 5; i++) { //stored in next generated item
         // Produce an item
         next_produced = i * 10;
         printf("Produced Item: %d\n", next_produced);

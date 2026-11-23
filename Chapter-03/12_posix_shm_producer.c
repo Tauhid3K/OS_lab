@@ -1,3 +1,6 @@
+//This is the first example that uses actual operating-system IPC.
+// It creates a POSIX shared-memory object, maps it into memory, and writes a string into it.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -9,11 +12,11 @@
 
 int main(void)
 {
-    const int SIZE = 4096;
-    const char *name = "OS_SHM";
+    const int SIZE = 4096;      //The shared-memory object is 4096 bytes.
+    const char *name = "OS_SHM";//Name of the shared-memory object
 
-    int fd;
-    char *ptr;
+    int fd;     //fd = file descriptor for the shared memory object
+    char *ptr;  //ptr = pointer to the shared memory object
 
     // Create shared memory object
     fd = shm_open(name, O_CREAT | O_RDWR, 0666);

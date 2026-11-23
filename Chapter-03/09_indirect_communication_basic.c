@@ -1,3 +1,5 @@
+//Indirect communication uses a mailbox or message queue as an intermediary.
+
 #include <stdio.h>
 
 int main(void)

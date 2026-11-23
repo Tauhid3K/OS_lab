@@ -1,3 +1,5 @@
+//Asymmetric communication means the sender sends a message to a receiver, 
+//but the receiver does not necessarily name the sender in advance.
 #include <stdio.h>
 
 int main(void)

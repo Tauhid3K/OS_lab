@@ -13,12 +13,24 @@ Chapter-03/
 ├── 03_windows_process_creation.c  # Figure 3.10: Windows CreateProcess()
 ├── 04_producer_consumer_buffer.c  # Section 3.5.1: Bounded-buffer declarations & producer
 ├── 05_consumer_shared_memory.c    # Figure 3.13: Consumer using shared memory
-├── 06_message_passing_basic.c     # Section 3.5.2: Basic message passing model
-├── 07_direct_communication.c      # Section 3.5.2: Direct symmetric IPC
-├── 08_asymmetric_communication.c  # Section 3.5.2: Asymmetric IPC
-├── 09_indirect_communication.c    # Section 3.5.2: Indirect communication (mailboxes)
-├── 10_mailbox_operations.c        # Section 3.5.2: Mailbox lifecycle operations
-├── 11_producer_message_passing.c  # Figure 3.14: Producer using message passing
+├── 06_message_passing_basic.c          # Section 3.5.2: Conceptual message passing (print demonstration)
+├── 06_message_passing_sender.c         # Section 3.5.2: POSIX message queue sender process
+├── 06_message_passing_receiver.c       # Section 3.5.2: POSIX message queue receiver process
+├── 07_direct_communication_basic.c     # Section 3.5.2: Conceptual direct communication (print demonstration)
+├── 07_direct_comm_sender.c             # Section 3.5.2: Direct symmetric IPC sender process
+├── 07_direct_comm_receiver.c           # Section 3.5.2: Direct symmetric IPC receiver process
+├── 08_asymmetric_communication_basic.c # Section 3.5.2: Conceptual asymmetric IPC (print demonstration)
+├── 08_asymmetric_comm_sender.c         # Section 3.5.2: Asymmetric IPC sender process
+├── 08_asymmetric_comm_receiver.c       # Section 3.5.2: Asymmetric IPC receiver process
+├── 09_indirect_communication_basic.c   # Section 3.5.2: Conceptual indirect communication (print demonstration)
+├── 09_indirect_comm_sender.c           # Section 3.5.2: Indirect communication sender process
+├── 09_indirect_comm_receiver.c         # Section 3.5.2: Indirect communication receiver process
+├── 10_mailbox_operations_basic.c       # Section 3.5.2: Conceptual mailbox lifecycle (print demonstration)
+├── 10_mailbox_sender.c                 # Section 3.5.2: Mailbox sender process
+├── 10_mailbox_receiver.c               # Section 3.5.2: Mailbox lifecycle manager & receiver process
+├── 11_producer_message_passing_basic.c # Figure 3.14: Conceptual producer message passing (print demonstration)
+├── 11_producer_msg_passing.c           # Figure 3.14: Producer process using message passing
+├── 11_consumer_msg_passing.c           # Figure 3.15: Consumer process using message passing
 ├── 12_posix_shm_producer.c        # Figure 3.16: POSIX shared-memory producer
 ├── 13_posix_shm_consumer.c        # Figure 3.17: POSIX shared-memory consumer
 ├── 14_unix_pipe.c                 # Figure 3.21 & 3.22: UNIX ordinary pipe (parent/child)

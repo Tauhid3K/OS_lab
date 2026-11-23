@@ -1,3 +1,6 @@
+//This program demonstrates a circular bounded buffer.
+//A producer inserts items, while a consumer removes them
+
 #include <stdio.h>
 
 #define BUFFER_SIZE 10
@@ -32,9 +35,11 @@ void producer(int value)
     } else {
         item next_produced;
         next_produced.data = value;
-        buffer[in] = next_produced;
+        buffer[in] = next_produced; 
+        // Store the produced item in the buffer
         printf("Produced: %d\n", value);
-        in = (in + 1) % BUFFER_SIZE;
+        in = (in + 1) % BUFFER_SIZE; 
+        // Move to the next position in the circular buffer
     }
 }
 
@@ -46,8 +51,10 @@ void consumer(void)
     } else {
         item next_consumed;
         next_consumed = buffer[out];
+        // Retrieve the next item to be consumed
         printf("Consumed: %d\n", next_consumed.data);
         out = (out + 1) % BUFFER_SIZE;
+        // Move to the next position in the circular buffer
     }
 }
 

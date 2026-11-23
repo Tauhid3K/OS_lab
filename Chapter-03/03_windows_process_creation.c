@@ -5,25 +5,25 @@
 
 int main(void)
 {
-    STARTUPINFO si;
-    PROCESS_INFORMATION pi;
+    STARTUPINFO si;   //Contains startup configuration for the new process
+    PROCESS_INFORMATION pi;  // Receives informations
 
     ZeroMemory(&si, sizeof(si));
-    si.cb = sizeof(si);
+    si.cb = sizeof(si); // Contains the size of the structure
     ZeroMemory(&pi, sizeof(pi));
 
     printf("Parent Process Started\n");
 
     // Start child process
     if (!CreateProcess(
-        NULL,
+        NULL,   //use the command line
         "mspaint.exe",
+        NULL,   //Security attributes
         NULL,
-        NULL,
-        FALSE,
-        0,
-        NULL,
-        NULL,
+        FALSE,  //inherit handles
+        0,      //default creation flags
+        NULL,   //use the parent's environment
+        NULL,   //use the parent's current directory
         &si,
         &pi))
     {
@@ -34,7 +34,8 @@ int main(void)
     printf("Child Process Created Successfully\n");
 
     // Wait for Child Process
-    WaitForSingleObject(pi.hProcess, INFINITE);
+    WaitForSingleObject(pi.hProcess, INFINITE); 
+    //Infinite = wait without timeout 
 
     printf("Child Complete\n");
 

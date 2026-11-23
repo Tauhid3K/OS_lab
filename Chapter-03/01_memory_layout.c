@@ -3,24 +3,25 @@
 
 // Uninitialized data segment (BSS)
 int uninitialized_global;
+// BSS contains global and static variables
 
 // Initialized data segment
 int initialized_global = 15;
 
 int main(void)
 {
-    // Stack memory
+    // Stack memory = local variables
     int stack_var = 10;
 
     // Heap memory
     int *heap_var = (int *)malloc(5 * sizeof(int));
-    if (!heap_var) {
+    if (!heap_var) {  // malloc = returns a pointer to the allocated memory
         perror("malloc failed");
         return 1;
     }
 
     for (int j = 0; j < 5; j++) {
-        heap_var[j] = j;
+        heap_var[j] = j; // Writing values to the heap memory
     }
 
     printf("================ Memory Layout of C Program ================\n");
@@ -31,6 +32,6 @@ int main(void)
     printf("Stack Segment (local var)   : %p\n", (void *)&stack_var);
     printf("============================================================\n");
 
-    free(heap_var);
+    free(heap_var); //Dynamically allocated memory should be freed to avoid memory leaks
     return 0;
 }

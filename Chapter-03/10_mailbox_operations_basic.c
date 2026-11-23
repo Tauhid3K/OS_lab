@@ -1,3 +1,9 @@
+//This program demonstrates the conceptual lifecycle of a mailbox:
+//Create
+//Send
+//Receive
+//Delete
+
 #include <stdio.h>
 
 int main(void)

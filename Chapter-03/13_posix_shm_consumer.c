@@ -1,3 +1,5 @@
+//This program opens the shared-memory object created by the producer and reads its content.
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>

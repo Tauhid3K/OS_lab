@@ -1,0 +1,50 @@
+# ==============================================================================
+# Git Ignore Rules for OS Lab Repository
+# ==============================================================================
+
+# Compiled Object files & Kernel Build Artifacts
+*.o
+*.ko
+*.mod
+*.mod.c
+*.mod.o
+modules.order
+Module.symvers
+.tmp_versions/
+.*.cmd
+.*.d
+
+# Java Bytecode
+*.class
+
+# Compiled C/C++ Binaries in Chapter-03
+Chapter-03/06_message_passing_sender
+Chapter-03/06_message_passing_receiver
+Chapter-03/07_direct_comm_sender
+Chapter-03/07_direct_comm_receiver
+Chapter-03/07_direct_communication_basic
+Chapter-03/08_asymmetric_comm_sender
+Chapter-03/08_asymmetric_comm_receiver
+Chapter-03/08_asymmetric_communication_basic
+Chapter-03/09_indirect_comm_sender
+Chapter-03/09_indirect_comm_receiver
+Chapter-03/09_indirect_communication_basic
+Chapter-03/10_mailbox_sender
+Chapter-03/10_mailbox_receiver
+Chapter-03/10_mailbox_operations_basic
+Chapter-03/11_producer_msg_passing
+Chapter-03/11_consumer_msg_passing
+Chapter-03/11_producer_message_passing_basic
+
+# Temporary, Backup & Swap Files
+*.swp
+*.swo
+*~
+*.tmp
+*.pid
+.DS_Store
+
+# Logs & Core Dumps
+*.log
+core
+core.*
